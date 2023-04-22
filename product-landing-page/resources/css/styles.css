@@ -1,0 +1,308 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Header */
+header {
+    padding: 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    border-bottom: 2px solid black;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+header > img {
+    display: inline-block;
+    height: 2.5rem;
+    width: 30%;
+    flex: 1;
+}
+
+header > h1 {
+    display: inline-block;
+    width: 30%;
+    font-size: 3rem;
+    flex: 1;
+}
+
+header nav {
+    display: inline-block;
+    width: 30%;
+    flex: 1;
+}
+
+.nav-links li {
+    display: inline;
+    padding: 1rem;
+    font-size: 1.125rem;
+}
+
+/* Hero */
+.hero {
+    margin-top: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero img {
+    height: 700px;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Features */
+.features {
+    display: flex;
+    flex-direction: column;
+    margin: 60px auto;
+}
+
+.feature-card {
+    flex: 1;
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    margin-left: 25%;
+    height: 100px;
+}
+
+.feature-card > img {
+    height: 50px;
+    float: left;
+    padding-right: 40px;
+}
+
+.feature-card > h2 {
+    font-weight: bolder; 
+}
+
+/* Pricing */
+.pricing {
+    margin: 60px auto;
+    height: 400px;
+    background-color: black;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-card {
+    flex: 0 1 500px;
+    height: 300px;
+    width: 15%;
+    margin: auto 20px;
+    display: inline-block;
+    border: 3px solid white;
+    text-align: center;
+}
+
+.pricing-card > h2 {
+    height: 20%;
+    background-color: gray;
+    padding: 10px;
+}
+
+.pricing-card > h3 {
+    height: 20%;
+    padding: 10px;
+}
+
+.pricing-card > p {
+    height: 40%;
+    padding: 8px;
+}
+
+.btn {
+    height: 40px;
+    width: 25%;
+    border: 1px solid black;
+    border-radius: 8px;
+
+}
+
+/* Subscription */
+.subscription {
+    display: flex;
+    justify-content: center;
+    margin: 60px auto;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.subscription-form > label {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.subscription-form > input {
+    margin: 10px auto;
+}
+
+.email-btn, .submit-btn {
+    width: 50%;
+}
+
+.subscription-form {
+    float: left;
+    width: 40%;
+}
+
+.video {
+    float: right;
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 30px;
+    width: 100%;
+    color: white;
+    background-color: black;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.footer > * {
+    flex: 1;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer ul, .author, .copyright {
+    width: 30%;
+    flex: 1;
+}
+
+.main-nav li:hover {
+    border-bottom: 1px solid black;
+}
+
+.second-nav li:hover {
+    border-bottom: 1px solid white;
+}
+
+/* Mobile Design */
+@media (width < 1200px) {
+
+    /* header */
+
+    header > nav, header > img {
+        display: none;
+    }
+
+    /* hero */
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero > * {
+        flex: 1;
+    }
+
+    /* Pricing */
+
+    .pricing {
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pricing-card {
+        flex: 1;
+        width: 50%;
+        margin: 20px auto;
+        border-radius: 8px;
+    }
+
+    .pricing-card > h2 {
+        color: white;
+        background-color: gray;
+    }
+
+    /* Subscription */
+    .subscription {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .subscription-form > label {
+        font-size: 1.25rem;
+        font-weight: bolder;
+    }
+
+    .subscription-form, .video {
+        margin: 20px;
+    }
+
+    .video {
+        height: 200px;
+        width: 500px;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer > * {
+        flex: 1;
+        padding: 10px;
+        margin: .5rem;
+        width: 100%;
+    }
+}
